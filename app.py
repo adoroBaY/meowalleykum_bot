@@ -45,6 +45,6 @@ async def answer(message: types.Message):
                 await bot.send_message(message.chat.id, 'Ok!')
                 await bot.send_photo(chat_id=message.chat.id, photo=open('cat.jpg', 'rb'))
 
-if __name__ == '__main__':
+if __name__ == '__app__':
     executor.start_polling(dp, skip_updates=True)
 
