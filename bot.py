@@ -16,7 +16,7 @@ async def welcome(message: types.Message):
     user_id = message.from_user.id
     user_full_name = message.from_user.full_name
     logging.info(f'{user_id=} {user_full_name=}')
-    sti = open('C:/not_delete.webp', 'rb')
+    sti = open('/not_delete.webp', 'rb')
     await bot.send_sticker(message.chat.id, sti, )
     await message.reply(f'Meowalleykum, {user_full_name}! Do you wanna some kitties?', reply_markup=keyboard)
 
@@ -25,7 +25,7 @@ async def welcome(message: types.Message):
 async def answer(message: types.Message):
     if message.text == 'No!':
         await bot.send_message(message.chat.id, 'Go away!')
-        with open('C:/brother.jpg', 'rb') as bro:
+        with open('/brother.jpg', 'rb') as bro:
             bro = bro.read()
             await bot.send_photo(message.chat.id, bro)
     elif message.text == 'Yeeesss!!!':
