@@ -75,9 +75,10 @@ async def answer(message: types.Message):
 
             # Скачиваем изображение
             image_data = requests.get(image_url).content
-            image_path = os.path.join(os.getcwd(), "cat.jpg")
+            image_path = "/opt/my_project/cat.jpg"
             with open(image_path, "wb") as f:
                 f.write(image_data)
+
             logging.info(f"Image saved successfully to {image_path}.")
 
             # Отправляем изображение котика
